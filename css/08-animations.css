@@ -1,0 +1,78 @@
+/* ==========================================
+   08 - TRANSITIONS AND ANIMATIONS
+   ========================================== */
+
+body { font-family: Arial, sans-serif; padding: 20px; }
+
+/* ---- TRANSITION: smooth change from one style to another ----
+   transition: property duration timing-function;
+*/
+.btn {
+  background: royalblue;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background: crimson;
+  transform: scale(1.1);          /* make it 10% bigger */
+}
+
+.grow-box {
+  width: 150px;
+  padding: 20px;
+  margin-top: 16px;
+  background: teal;
+  color: white;
+  transition: all 0.4s;
+}
+.grow-box:hover {
+  width: 250px;
+  transform: rotate(3deg);
+}
+
+/* ---- TRANSFORM ----
+   translate(x, y) -> move
+   scale(n)        -> resize
+   rotate(deg)     -> rotate
+*/
+
+/* ---- ANIMATION with @keyframes ---- */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+}
+
+.bounce {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  border-radius: 50%;
+  margin: 50px 0 10px;
+  animation: bounce 1s ease-in-out infinite;   /* name duration timing repeat */
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ddd;
+  border-top-color: royalblue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.fade {
+  animation: fadeIn 2s;
+}

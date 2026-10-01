@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lists and Tables</title>
+  <style>
+    /* Just a little CSS so the table borders are visible */
+    table, th, td { border: 1px solid #444; border-collapse: collapse; padding: 6px 10px; }
+    th { background: #eee; }
+  </style>
+</head>
+<body>
+
+  <h2>Unordered list (bullets)</h2>
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+  </ul>
+
+  <h2>Ordered list (numbers)</h2>
+  <ol>
+    <li>Wake up</li>
+    <li>Code</li>
+    <li>Sleep</li>
+  </ol>
+
+  <h2>Nested list</h2>
+  <ul>
+    <li>Fruits
+      <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+      </ul>
+    </li>
+    <li>Vegetables</li>
+  </ul>
+
+  <h2>Description list</h2>
+  <dl>
+    <dt>HTML</dt>
+    <dd>Structure of a web page</dd>
+    <dt>CSS</dt>
+    <dd>Style of a web page</dd>
+  </dl>
+
+  <h2>Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Riya</td>
+        <td>20</td>
+        <td>Patna</td>
+      </tr>
+      <tr>
+        <td>Aman</td>
+        <td>22</td>
+        <td>Delhi</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Total: 2 students</td> <!-- colspan = merge columns -->
+      </tr>
+    </tfoot>
+  </table>
+
+  <!--
+    tr = table row
+    th = table heading cell
+    td = table data cell
+  -->
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* ==========================================
+   04 - DISPLAY AND POSITION
+   ========================================== */
+
+body { font-family: Arial, sans-serif; padding: 20px; }
+
+.demo {
+  background: lightgreen;
+  padding: 8px;
+  margin: 4px;
+}
+
+/* ---- display ----
+   block         -> starts on a new line, takes full width (div, p, h1)
+   inline        -> sits in a line, width/height ignored (span, a)
+   inline-block  -> sits in a line, but width/height work
+   none          -> hides the element completely
+   flex / grid   -> layout (see next lessons)
+*/
+.inline-block {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+}
+.hidden { display: none; }
+
+/* ---- position ----
+   static   -> normal flow (default)
+   relative -> stays in place, but can be nudged; also becomes a "reference" for children
+   absolute -> placed relative to the nearest positioned parent
+   fixed    -> stays on screen even while scrolling
+   sticky   -> normal until you scroll past, then sticks
+*/
+.parent {
+  position: relative;
+  height: 150px;
+  background: #eee;
+  padding: 10px;
+  margin-top: 10px;
+}
+.child {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: orange;
+  padding: 8px;
+}
+
+.fixed-badge {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: royalblue;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  z-index: 10;   /* higher number = on top */
+}
+
+/* ---- overflow: what if content is too big? ---- */
+/* .box { overflow: hidden; }  hide extra
+   .box { overflow: auto; }    add scrollbars when needed */

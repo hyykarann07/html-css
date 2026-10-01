@@ -1,0 +1,113 @@
+/* Mini project: Personal portfolio
+   Uses: variables, flexbox, grid, hover effects, responsive design */
+
+:root {
+  --primary: #4f46e5;
+  --dark: #1f2937;
+  --light: #f3f4f6;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* ----- Header ----- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5%;
+  background: var(--dark);
+  position: sticky;      /* stays at the top when scrolling */
+  top: 0;
+}
+.logo { color: white; font-size: 1.4rem; }
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+.nav a:hover { color: #a5b4fc; }
+
+/* ----- Hero ----- */
+.hero {
+  text-align: center;
+  padding: 100px 5%;
+  background: linear-gradient(135deg, var(--primary), #9333ea);
+  color: white;
+}
+.hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero span { text-decoration: underline; }
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: white;
+  color: var(--primary);
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.btn:hover { transform: translateY(-3px); }
+
+/* ----- Sections ----- */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+.section h2 { margin-bottom: 20px; color: var(--primary); }
+
+/* ----- Cards (grid) ----- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 12px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ----- Form ----- */
+.form { display: flex; flex-direction: column; gap: 12px; }
+.form input, .form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.form .btn { background: var(--primary); color: white; align-self: flex-start; }
+
+/* ----- Footer ----- */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark);
+  color: white;
+}
+
+/* ----- Responsive: small screens ----- */
+@media (max-width: 600px) {
+  .header { flex-direction: column; gap: 10px; }
+  .nav a { margin: 0 10px; }
+  .hero h2 { font-size: 1.8rem; }
+}

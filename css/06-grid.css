@@ -1,0 +1,46 @@
+/* ==========================================
+   06 - CSS GRID
+   ==========================================
+   Grid arranges items in ROWS AND COLUMNS (2 directions).
+   Put display: grid on the PARENT.
+   Flexbox = one direction, Grid = two directions.
+*/
+
+body { font-family: Arial, sans-serif; padding: 20px; }
+
+.cell {
+  background: #ff9800;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  background: #eee;
+  padding: 10px;
+}
+
+/* 3 equal columns. "fr" = fraction of the free space */
+.three {
+  grid-template-columns: 1fr 1fr 1fr;
+  /* shortcut: repeat(3, 1fr) */
+}
+
+/* fixed + flexible columns */
+.sidebar-layout {
+  grid-template-columns: 200px 1fr;
+}
+
+/* make one item span 2 columns */
+.wide {
+  grid-column: span 2;
+}
+
+/* As many columns as fit, each at least 150px wide.
+   Resize the browser and watch the columns change — no media query needed! */
+.auto {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}

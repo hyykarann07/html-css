@@ -1,0 +1,65 @@
+/* ==========================================
+   07 - RESPONSIVE DESIGN
+   ==========================================
+   Responsive = the page looks good on phones, tablets and computers.
+
+   Needs this line in <head>:
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+*/
+
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; }
+
+.top {
+  background: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.box {
+  padding: 20px;
+  border-radius: 6px;
+  color: white;
+}
+.nav  { background: #e91e63; }
+.main { background: #009688; }
+.side { background: #ff9800; }
+
+/* ---- MOBILE FIRST: default styles are for phones (stacked) ---- */
+.layout {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: 1fr;
+}
+
+/* ---- MEDIA QUERY: styles that apply only when the screen is wide enough ---- */
+@media (min-width: 600px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .main { grid-column: span 2; }
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 200px 1fr 200px;   /* 3 columns on desktops */
+  }
+  .main { grid-column: auto; }
+}
+
+/* ---- Images that never overflow ---- */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  padding: 10px;
+}
+
+/* ---- Handy flexible units ----
+   %    -> percent of the parent
+   vw   -> 1% of the screen width
+   vh   -> 1% of the screen height
+   rem  -> relative to the root font size
+*/

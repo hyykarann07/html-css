@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Grid</title>
+  <!-- Connects the CSS file to this page -->
+  <link rel="stylesheet" href="06-grid.css" />
+</head>
+<body>
+  <h1>CSS Grid</h1>
+
+  <h3>3 equal columns</h3>
+  <div class="grid three">
+    <div class="cell">1</div><div class="cell">2</div><div class="cell">3</div>
+    <div class="cell">4</div><div class="cell">5</div><div class="cell">6</div>
+  </div>
+
+  <h3>Different column sizes</h3>
+  <div class="grid sidebar-layout">
+    <div class="cell">Sidebar (200px)</div>
+    <div class="cell">Main area (rest of space)</div>
+  </div>
+
+  <h3>Spanning</h3>
+  <div class="grid three">
+    <div class="cell wide">Spans 2 columns</div>
+    <div class="cell">3</div>
+    <div class="cell">4</div><div class="cell">5</div><div class="cell">6</div>
+  </div>
+
+  <h3>Auto responsive cards (resize the window!)</h3>
+  <div class="grid auto">
+    <div class="cell">Card</div><div class="cell">Card</div><div class="cell">Card</div>
+    <div class="cell">Card</div><div class="cell">Card</div>
+  </div>
+</body>
+</html>

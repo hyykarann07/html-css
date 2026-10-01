@@ -1,0 +1,85 @@
+/* ==========================================
+   01 - SELECTORS AND COLORS
+   ==========================================
+   CSS rule:  selector { property: value; }
+   The selector picks WHAT to style.
+   The property + value say HOW.
+*/
+
+/* ---- Element selector: styles ALL <p> tags ---- */
+p {
+  color: darkslategray;
+}
+
+/* ---- Class selector (.): reusable, can be used many times ---- */
+.highlight {
+  background-color: yellow;
+}
+
+/* ---- ID selector (#): unique, use once per page ---- */
+#special {
+  color: crimson;
+  font-weight: bold;
+}
+
+/* ---- Group selector: same style for several ---- */
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  color: #1a237e;
+}
+
+/* ---- Descendant selector: <span> INSIDE .card ---- */
+.card span {
+  color: green;
+}
+
+.card {
+  border: 2px solid #999;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* ---- Pseudo-classes: styles for a state ---- */
+li:hover {
+  background-color: lightblue;   /* when mouse is over */
+}
+li:first-child {
+  font-weight: bold;             /* the first li */
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: royalblue;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.btn:hover {
+  background: navy;
+}
+
+/* ---- Universal selector: everything ---- */
+* {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   WAYS TO WRITE COLORS
+   ==========================================
+   Name:  red, blue, tomato
+   Hex:   #ff0000, #f00
+   RGB:   rgb(255, 0, 0)
+   RGBA:  rgba(255, 0, 0, 0.5)   <- last number = transparency
+   HSL:   hsl(0, 100%, 50%)
+*/
+
+/* ---- CSS variables: define a value once, reuse it ---- */
+:root {
+  --main-color: #ff5722;
+}
+h1 {
+  border-bottom: 3px solid var(--main-color);
+}
+
+/* ---- Comments start with /* and end with */ 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Flexbox</title>
+  <!-- Connects the CSS file to this page -->
+  <link rel="stylesheet" href="05-flexbox.css" />
+</head>
+<body>
+  <h1>Flexbox</h1>
+
+  <h3>Basic row</h3>
+  <div class="flex-row">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>Space between</h3>
+  <div class="flex-row between">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>Perfect centering</h3>
+  <div class="center-box">
+    <div class="item">Centered!</div>
+  </div>
+
+  <h3>Column + gap</h3>
+  <div class="flex-col">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <h3>Wrapping + flex-grow</h3>
+  <div class="flex-row wrap">
+    <div class="item grow">Grow</div><div class="item">Normal</div><div class="item">Normal</div>
+  </div>
+</body>
+</html>

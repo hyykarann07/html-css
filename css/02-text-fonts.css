@@ -1,0 +1,52 @@
+/* ==========================================
+   02 - TEXT AND FONTS
+   ========================================== */
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif; /* first font that exists is used */
+  font-size: 18px;
+  color: #222;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.fancy {
+  font-size: 24px;          /* size */
+  font-weight: bold;        /* thickness: normal, bold, or 100-900 */
+  font-style: italic;       /* normal or italic */
+  color: purple;
+}
+
+.center { text-align: center; }   /* left, right, center, justify */
+.right  { text-align: right; }
+
+.upper {
+  text-transform: uppercase;  /* uppercase, lowercase, capitalize */
+}
+
+.spaced {
+  letter-spacing: 4px;   /* space between letters */
+  word-spacing: 10px;    /* space between words */
+}
+
+a {
+  text-decoration: none; /* none, underline, line-through */
+  color: teal;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.long {
+  line-height: 1.8;      /* space between lines */
+  text-align: justify;
+  text-shadow: 1px 1px 2px lightgray;
+}
+
+/* ---- Units for size ----
+   px  -> pixels (fixed)
+   em  -> relative to parent font size
+   rem -> relative to the root font size (recommended)
+   %   -> percentage of the parent
+*/
+h1 { font-size: 2rem; }

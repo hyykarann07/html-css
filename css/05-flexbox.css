@@ -1,0 +1,58 @@
+/* ==========================================
+   05 - FLEXBOX
+   ==========================================
+   Flexbox arranges items in ONE direction (a row or a column).
+   Put display: flex on the PARENT (container).
+   The children become "flex items".
+*/
+
+body { font-family: Arial, sans-serif; padding: 20px; }
+
+.item {
+  background: #4caf50;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 6px;
+}
+
+.flex-row {
+  display: flex;            /* turn on flexbox: items go in a row */
+  gap: 10px;                /* space between items */
+  background: #eee;
+  padding: 10px;
+}
+
+/* justify-content: alignment along the MAIN axis (row = horizontal)
+   flex-start | center | flex-end | space-between | space-around | space-evenly */
+.between {
+  justify-content: space-between;
+}
+
+/* align-items: alignment along the CROSS axis (row = vertical)
+   stretch | flex-start | center | flex-end */
+.center-box {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  height: 150px;
+  background: #eee;
+}
+
+/* flex-direction: row (default) | column */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #eee;
+  padding: 10px;
+}
+
+/* flex-wrap: let items go to the next line if there's no room */
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* flex-grow: let an item take the leftover space */
+.grow {
+  flex-grow: 1;
+}

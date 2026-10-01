@@ -1,0 +1,57 @@
+/* ==========================================
+   03 - THE BOX MODEL
+   ==========================================
+   Every element is a rectangular box made of 4 layers
+   (from inside to outside):
+
+   ┌───────────── margin ─────────────┐
+   │  ┌────────── border ──────────┐  │
+   │  │  ┌─────── padding ───────┐ │  │
+   │  │  │        content        │ │  │
+   │  │  └───────────────────────┘ │  │
+   │  └────────────────────────────┘  │
+   └──────────────────────────────────┘
+
+   content -> the text/image itself
+   padding -> space INSIDE the border
+   border  -> the line around
+   margin  -> space OUTSIDE the border
+*/
+
+* {
+  box-sizing: border-box; /* width includes padding and border (much easier!) */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.box {
+  width: 300px;
+  height: 100px;
+  background-color: lightyellow;
+
+  padding: 20px;                 /* all 4 sides */
+  border: 3px solid orange;      /* width style color */
+  margin: 20px;
+}
+
+.two {
+  /* shorthand: top right bottom left (clockwise) */
+  margin: 10px 0 10px 50px;
+  padding: 10px 30px;            /* top+bottom  left+right */
+  border-style: dashed;
+}
+
+.round {
+  width: 300px;
+  padding: 20px;
+  margin-top: 20px;
+  background: white;
+  border-radius: 16px;                        /* round corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* x  y  blur  color */
+}
+
+/* Center a block horizontally: give it a width, then use margin: auto */
+/* .box { margin: 0 auto; } */
